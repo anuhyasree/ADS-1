@@ -28,34 +28,31 @@ class Percolation {
 		if (grid[row][col] == 1) {
 			return;
 		}
-		if (row > 0 && row <= size - 1) {
+		if (row > 0 && row < size - 1) {
 			if (grid[row + 1][col] == 1) {
 				wqu.union(component(row, col), component(row + 1, col));
 			}
 		}
-		if (row <= size - 1) {
+		if (row < size - 1) {
 			if (grid[row - 1][col] == 1) {
 				wqu.union(component(row, col), component(row - 1, col));
 			}
 		}
 
-		if (col > 0 && col <= size - 1 ) {
+		if (col > 0 && col < size - 1 ) {
 			if (grid[row][col - 1] == 1) {
 				wqu.union(component(row, col), component(row, col - 1));
 			}
 		}
-		if (col > 0 && col <= size - 1 ) {
+		if (col > 0 && col < size - 1 ) {
 			if (grid[row][col + 1] == 1) {
 				wqu.union(component(row, col), component(row, col + 1));
 			}
 		}
-		if (col == 0) {
-			wqu.union(0, component(row, col));
-		}
 		if (col == size - 1) {
-			wqu.union(((size * size) + 1), component(row, col));
+			wqu.union(size - 1, component(row, col));
 		}
-		if (col <= size - 1) {
+		if (col < size - 1) {
 			if (grid[row][col - 1] == 1) {
 				wqu.union(component(row, col), component(row , col - 1));
 			}
