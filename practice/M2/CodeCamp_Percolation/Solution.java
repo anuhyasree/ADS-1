@@ -104,3 +104,4 @@ class Percolate {
 // is site (row, col) full?
 // number of open sites
 // does the system percolate?
+
