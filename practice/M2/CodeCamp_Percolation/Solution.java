@@ -36,47 +36,52 @@ class Percolation {
 			}
 		}
 
-		if (col > 0 ) {
+		if (col > 0 && col <= size - 1 ) {
 			if (grid[row][col - 1] == 1) {
 				wqu.union(component(row, col), component(row, col - 1));
 			}
 		}
-	}
-	int component(int i, int j) {
-		return ((i * size) + j) + 1;
-	}
-	public boolean isOpen(int row, int col) {
-		// is site (row, col) open?
-		return grid[row - 1][col - 1] == 1;
-
-	}
-
-	public boolean isFull(int row, int col) {
-		// is site (row, col) full?
-		return grid[row - 1][col - 1] == 0;
-	}
-	public int numberOfOpenSites() {
-		// number of open sites
-		return opensites;
-	}
-	public boolean percolates()    {
-		// does the system percolate?
-		return wqu.connected(0, (size * size) + 2);
-
-	}
-}
-
-class Solution {
-	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		int size = s.nextInt();
-		Percolation pr = new Percolation(size);
-		while (s.hasNext()) {
-			pr.open(s.nextInt(), s.nextInt());
+		if (col > 0 && col <= size - 1 ) {
+			if (grid[row][col + 1] == 1) {
+				wqu.union(component(row, col), component(row, col + 1));
+			}
 		}
-		System.out.println(pr.percolates());
 	}
-}
+		int component(int i, int j) {
+			return ((i * size) + j) + 1;
+		}
+		public boolean isOpen(int row, int col) {
+			// is site (row, col) open?
+			return grid[row - 1][col - 1] == 1;
+
+		}
+
+		public boolean isFull(int row, int col) {
+			// is site (row, col) full?
+			return grid[row - 1][col - 1] == 0;
+		}
+		public int numberOfOpenSites() {
+			// number of open sites
+			return opensites;
+		}
+		public boolean percolates()    {
+			// does the system percolate?
+			return wqu.connected(0, (size * size) + 1);
+
+		}
+	}
+
+	class Solution {
+		public static void main(String[] args) {
+			Scanner s = new Scanner(System.in);
+			int size = s.nextInt();
+			Percolation pr = new Percolation(size);
+			while (s.hasNext()) {
+				pr.open(s.nextInt(), s.nextInt());
+			}
+			System.out.println(pr.percolates());
+		}
+	}
 
 // You can implement the above API to solve the problem
 // create n-by-n grid, with all sites blocked
