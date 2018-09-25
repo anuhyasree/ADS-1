@@ -46,6 +46,12 @@ class Percolation {
 				wqu.union(component(row, col), component(row, col + 1));
 			}
 		}
+		if (col == 0) {
+			wqu.union(0, component(row, col));
+		}
+		if (col == size - 1) {
+			wqu.union(((size * size) + 1), component(row, col));
+		}
 	}
 		int component(int i, int j) {
 			return ((i * size) + j) + 1;
