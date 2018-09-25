@@ -61,7 +61,7 @@ class Percolation {
 	}
 	public boolean percolates()    {
 		// does the system percolate?
-		return wqu.connected(0, (size * size) + 1);
+		return wqu.connected(0, (size * size) + 2);
 
 	}
 }
