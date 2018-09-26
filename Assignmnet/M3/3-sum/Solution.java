@@ -13,7 +13,7 @@ class Solution {
     /**.
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
         /**.
          * { item_description }
          */
