@@ -60,6 +60,62 @@ final class AddLargeNumbers {
             final LinkedList list2) {
 
         LinkedList lis = new LinkedList();
+        Stack stat = new Stack();
+        Iterator iterate = new Iterator(list1.getHead());
+        while (iterate.hasNext()) {
+            stat.push(iterate.next());
+        }
+
+        Stack stac = new Stack();
+        Iterator iter = new Iterator(list2.getHead());
+        while (iter.hasNext()) {
+            stac.push(iter.next());
+        }
+
+        int flag = 0;
+
+        while (!stat.isEmpty() && !stac.isEmpty()) {
+            int total = 0;
+            int num = Character.getNumericValue(stat.pop());
+            int value = Character.getNumericValue(stac.pop());
+            if (flag == 0) {
+                total = num + value;
+            } else if (flag == 1) {
+                total = num + value + flag;
+            }
+            if (total > 9) {
+                flag = 1;
+            } else {
+                flag = 0;
+            }
+
+            int add = total % 10;
+            char ch = (char) (add + '0');
+
+            lis.add(ch);
+        }
+
+        if (stat.isEmpty() && stac.isEmpty() && flag == 1) {
+            char carrAdd = (char) (flag + '0');
+            lis.add(carrAdd);
+        }
+        while (!stat.isEmpty() && stac.isEmpty()) {
+            int total = 0;
+            int num = Character.getNumericValue(stat.pop());
+            if (flag == 0) {
+                total = num;
+            } else if (flag == 1) {
+                total = num + flag;
+                flag = 0;
+            }
+
+            int add = total % 10;
+            char ch = (char) (add + '0');
+
+            lis.add(ch);
+
+        }
+
         return lis;
     }
 }

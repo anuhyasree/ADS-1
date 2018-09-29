@@ -53,12 +53,29 @@ class LinkedList {
 	public Node getNext(Node node) {
 		return node.next;
 	}
-
-	public void print() {
-		Node temp = head;
-		while (temp != null) {
-			System.out.println(temp.data + "-->");
-			temp = temp.next;
-		}
+	public void setHead() {
+		head = head.next;
 	}
+}
+class Stack {
+	LinkedList listInp;
+
+	public Stack() {
+		listInp = new LinkedList();
+	}
+
+	public void push(char item) {
+		listInp.add(item);
+	}
+
+	public char pop() {
+		char out = listInp.getData(listInp.getHead());
+		listInp.setHead();
+		return out;
+	}
+
+	public boolean isEmpty() {
+		return listInp.isEmpty();
+	}
+
 }
