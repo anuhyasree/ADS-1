@@ -60,40 +60,6 @@ final class AddLargeNumbers {
             final LinkedList list2) {
 
         LinkedList lis = new LinkedList();
-        int flag = 0;
-        Stack stat = new Stack();
-        Iterator iterat = new Iterator(list1.getHead());
-        while (iterat.hasNext()) {
-            stat.push(iterat.next());
-        }
-
-        Stack stac = new Stack();
-        Iterator inte = new Iterator(list2.getHead());
-        while (inte.hasNext()) {
-            stac.push(inte.next());
-        }
-        while (!stat.isEmpty() && !stac.isEmpty()) {
-            int total = 0;
-            int num = Character.getNumericValue(stat.pop());
-            int value = Character.getNumericValue(stac.pop());
-            if (flag == 0) {
-                total = num + value;
-            } else if (flag == 1) {
-                total = num + value + flag;
-            }
-            if (total > 9) {
-                flag = 1;
-            } else {
-                flag = 0;
-            }
-
-            int add = total % 10;
-            char ch = (char) (add + '0');
-
-            lis.add(ch);
-        }
-
-
         return lis;
     }
 }
@@ -142,4 +108,3 @@ final class Solution {
     }
 
 }
-
