@@ -3,7 +3,14 @@ import java.util.Scanner;
 /**.
  * Class for add large numbers.
  */
-class AddLargeNumbers {
+final class AddLargeNumbers {
+
+    /**.
+     * Constructs the object.
+     */
+    private AddLargeNumbers() {
+
+    }
 
     /**.
      * { function_description }
@@ -94,6 +101,8 @@ final class Solution {
                 AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
             System.out.println(
                 AddLargeNumbers.digitsToNumber(result));
+            break;
+        default:
             break;
         }
     }
