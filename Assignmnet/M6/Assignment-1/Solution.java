@@ -1,7 +1,17 @@
 import java.util.Scanner;
 
+/**.
+ * Class for add large numbers.
+ */
 class AddLargeNumbers {
 
+	/**.
+	 * { function_description }
+	 *
+	 * @param      number  The number
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static LinkedList numberToDigits(String number) {
 		LinkedList lis = new LinkedList();
 		for (int i = 0; i < number.length(); i++) {
@@ -10,6 +20,13 @@ class AddLargeNumbers {
 		return lis;
 	}
 
+	/**.
+	 * { function_description }
+	 *
+	 * @param      list  The list
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static String digitsToNumber(LinkedList list) {
 		String out = "";
 		String outFin = "";
@@ -24,14 +41,31 @@ class AddLargeNumbers {
 		return outFin;
 	}
 
-	public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+	/**.
+	 * Adds large numbers.
+	 *
+	 * @param      list1  The list 1
+	 * @param      list2  The list 2
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public static LinkedList addLargeNumbers(LinkedList list1,
+	        LinkedList list2) {
 
 		LinkedList lis = new LinkedList();
 		return lis;
 	}
 }
 
+/**.
+ * Class for solution.
+ */
 public class Solution {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String input = sc.nextLine();
