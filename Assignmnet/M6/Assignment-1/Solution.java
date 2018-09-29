@@ -42,9 +42,9 @@ final class AddLargeNumbers {
             out += it.next();
         }
 
-        for (int i = out.length() - 1; i >= 0; i--) {
-            outFin += out.charAt(i);
-        }
+        // for (int i = out.length() - 1; i >= 0; i--) {
+        //     outFin += out.charAt(i);
+        // }
         return outFin;
     }
 
@@ -115,6 +115,22 @@ final class AddLargeNumbers {
             lis.add(ch);
 
         }
+        while (!stac.isEmpty() && stat.isEmpty()) {
+            int total = 0;
+            int value = Character.getNumericValue(stac.pop());
+            if (flag == 0) {
+                total = value;
+            } else if (flag == 1) {
+                total = value + flag;
+                flag = 0;
+            }
+            int add = total % 10;
+            char ch = (char) (add + '0');
+
+            lis.add(ch);
+
+        }
+
 
         return lis;
     }
