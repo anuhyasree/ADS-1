@@ -1,9 +1,22 @@
 import java.util.Scanner;
 
+/**.
+ * { item_description }
+ */
 public final class Solution {
+    /**.
+     * Constructs the object.
+     */
     private Solution() {
 
     }
+    /**.
+     * { function_description }
+     *
+     * @param      args       The arguments
+     *
+     * @throws     Exception  { exception_description }
+     */
     public static void main(final String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
         int n = Integer.parseInt(scan.nextLine());
@@ -41,3 +54,4 @@ public final class Solution {
         }
     }
 }
+
