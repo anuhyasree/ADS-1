@@ -1,33 +1,43 @@
-import java.util.*;
+import java.util.Scanner;
 
-class Solution {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+public final class Solution {
+    private Solution() {
+
+    }
+    public static void main(final String[] args) throws Exception {
+        Scanner scan = new Scanner(System.in);
         int n = Integer.parseInt(scan.nextLine());
-        Linkedlist l = new Linkedlist();
+        String line;
         for (int i = 0; i < n; i++) {
-            String[] line = scan.nextLine().split(" ");
-            switch (line[0]) {
-            case "push":
-                l.push(Integer.parseInt(line[1]));
-                System.out.println(l);
-                break;
-            case "enqueue":
-                l.enqueue(Integer.parseInt(line[1]));
-                System.out.println(l);
-                break;
-            case "pop":
-                if (l.pop() != 0) {
-                    System.out.println(l);
+            Linkedlist l = new Linkedlist();
+            while (scan.hasNext()) {
+                line = scan.nextLine();
+                if (line.length() == 0) {
+                    break;
                 }
-                break;
-            case "size":
-                System.out.println(l.getSize());
-                break;
-            default:
-                break;
-
+                String[] input = line.split(" ");
+                switch (input[0]) {
+                case "push":
+                    l.push(Integer.parseInt(input[1]));
+                    System.out.println(l);
+                    break;
+                case "pop":
+                    try {
+                        l.pop();
+                        System.out.println(l);
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
+                    break;
+                case "enqueue":
+                    l.enqueue(Integer.parseInt(input[1]));
+                    System.out.println(l);
+                    break;
+                default:
+                    break;
+                }
             }
+            System.out.println();
         }
-	}
+    }
 }
