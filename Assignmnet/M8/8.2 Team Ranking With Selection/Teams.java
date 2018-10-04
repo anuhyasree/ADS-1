@@ -8,6 +8,7 @@ class Teams {
 	public void addCricketTeam(CricTeam t) {
 		teams[size++] = t;
 	}
+	// The complexity of this recursion is O(n)
 	public String toString() {
 		String s = "";
 		for (int i = 0; i < size; i++) {
@@ -18,14 +19,15 @@ class Teams {
 	public void exch(CricTeam[] teams, int i, int j) {
 		CricTeam ct = teams[j];
 		teams[j] = teams[i];
-		teams[i] = ct; 
+		teams[i] = ct;
 	}
+	// The complexity of this recursion is O(n^2)
 	public void InsertionSort() {
 		for (int i = 0; i < size - 1; i++) {
 			for (int j = i + 1; j > 0; j--) {
 				if (less(teams, j - 1, j)) {
 					exch(teams, j -1, j);
-				} 
+				}
 			}
         }
 	}
