@@ -3,11 +3,11 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**.
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
 
     }
 
@@ -40,7 +40,8 @@ class Solution {
                 System.out.println("No elements to reverse.");
                 }
                 break;
-                default : ;
+                default :
+                break;
             }
         }
     }
