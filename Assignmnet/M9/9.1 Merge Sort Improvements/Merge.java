@@ -8,6 +8,7 @@ class Merge {
         assert isSorted(array, mid + 1, hi);
 
         int i = lo, j = mid + 1;
+            // The complexity of this recursion is O(n)
         for (int k = lo; k <= hi; k++) {
             if (i > mid) {
                 newarray[k] = array[j++];
@@ -21,6 +22,7 @@ class Merge {
         }
         assert isSorted(newarray, lo, hi);
     }
+        // The complexity of this recursion is O(N)
     private static void sort(final Comparable[] array,
         final Comparable[] newarray, final int lo, final int hi) {
         if (hi <= lo + CUTOFF) {
@@ -29,9 +31,11 @@ class Merge {
             return;
         }
         int mid = lo + (hi - lo) / 2;
+            // The complexity of this recursion is O(n)
         sort(newarray, array, lo, mid);
+            // The complexity of this recursion is O(n)
         sort(newarray, array, mid + 1, hi);
-
+    // The complexity of this recursion is O(n)
         if (!less(array[mid + 1], array[mid])) {
            for (int i = lo; i <= hi; i++) {
             newarray[i] = array[i];
@@ -42,11 +46,13 @@ class Merge {
         }
         merge(array, newarray, lo, mid, hi);
     }
+        // The complexity of this recursion is O(n)
     public static void sort(final Comparable[] a) {
         Comparable[] aux = a.clone();
         sort(aux, a, 0, a.length - 1);
         assert isSorted(a);
     }
+        // The complexity of this recursion is O(n)
     public static void insertionSort(final Comparable[] a, final  int lo,
         final int hi) {
         for (int i = lo; i <= hi; i++) {
@@ -66,6 +72,7 @@ class Merge {
     public static boolean isSorted(final Comparable[] a) {
         return isSorted(a, 0, a.length - 1);
     }
+        // The complexity of this recursion is O(n)
     public static boolean isSorted(final Comparable[] a,
         final int lo, final int hi) {
         for (int i = lo + 1; i <= hi; i++) {
@@ -75,6 +82,7 @@ class Merge {
         }
         return true;
     }
+        // The complexity of this recursion is O(n)
     public static Object show(final Object[] a) {
         String s = "[";
         int i;
