@@ -29,8 +29,6 @@ public final class Solution {
 			}
 		}
 
-		// System.out.println(filled);
-
 		for (int i = filled; st > 0 && i < totSz; i++) {
 			if (filled < u + bc + st && sts[i].reserv.equals("ST")
 			        && filled <= v) {
@@ -39,7 +37,6 @@ public final class Solution {
 
 			}
 		}
-		// System.out.println(filled);
 
 		for (int i = filled; sc > 0 && i < totSz; i++) {
 			if (filled < u + bc + st + sc && sts[i].reserv.equals("SC")

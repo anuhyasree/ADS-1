@@ -5,16 +5,51 @@ import java.util.*;
  * Class for storing student information.
  */
 class Student implements Comparable<Student> {
+	/**.
+	 * { var_description }
+	 */
 	String name;
+	/**.
+	 * { var_description }
+	 */
 	String birthday;
+	/**.
+	 * { var_description }
+	 */
 	int sub1;
+		/**.
+	 * { var_description }
+	 */
 	int sub2;
+		/**.
+	 * { var_description }
+	 */
 	int sub3;
+		/**.
+	 * { var_description }
+	 */
 	int total;
+	/**.
+	 * { var_description }
+	 */
 	String reserv;
+		/**.
+	 * { var_description }
+	 */
 	int year;
+		/**.
+	 * { var_description }
+	 */
 	int month;
+		/**.
+	 * { var_description }
+	 */
 	int day;
+	/**.
+	 * Constructs the object.
+	 *
+	 * @param      input  The input
+	 */
 	Student(final String input) {
 		String[] inp = input.split(",");
 		name = inp[0];
@@ -29,6 +64,13 @@ class Student implements Comparable<Student> {
 		reserv = inp[6];
 	}
 
+	/**.
+	 * { function_description }
+	 *
+	 * @param      that  The that
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int compareTo (Student that) {
 		if (this.total > that.total) return 1;
 		if (this.total < that.total) return -1;
@@ -45,16 +87,38 @@ class Student implements Comparable<Student> {
 		return 0;
 	}
 
+	/**.
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		return name + "," + total + "," + reserv;
 	}
 }
 class MergeSort {
 
+	/**.
+	 * { function_description }
+	 *
+	 * @param      x     { parameter_description }
+	 * @param      y     { parameter_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static boolean more(Comparable x, Comparable y) {
 		return x.compareTo(y) > 0;
 	}
 
+	/**.
+	 * { function_description }
+	 *
+	 * @param      a     { parameter_description }
+	 * @param      aux   The auxiliary
+	 * @param      lo    The lower
+	 * @param      mid   The middle
+	 * @param      hi    The higher
+	 */
 	public static void merge(Comparable[] a, Comparable[] aux,
 	                         int lo, int mid, int hi) {
 
@@ -76,6 +140,14 @@ class MergeSort {
 			}
 		}
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @param      a     { parameter_description }
+	 * @param      aux   The auxiliary
+	 * @param      lo    The lower
+	 * @param      hi    The higher
+	 */
 	public static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
 		if (hi <= lo) return;
 		int mid = lo + (hi - lo) / 2;
@@ -83,6 +155,11 @@ class MergeSort {
 		sort(a, aux, mid + 1, hi);
 		merge(a, aux, lo, mid, hi);
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @param      a     { parameter_description }
+	 */
 	public static void sort(Comparable[] a) {
 		Comparable[] aux = new Comparable[a.length];
 		sort(a, aux, 0, a.length - 1);
