@@ -24,6 +24,7 @@ class MinHeap<E extends Comparable<E>> {
      *
      * @return     True if minimum heap, False otherwise.
      */
+    //only one for loop is there so the complexity is O(N)
     public boolean isMinHeap(final E[] arr1) {
         for (int i = 0; i < arr1.length - 1; i++) {
             if (!less(arr1[i], arr1[i + 1])) {
@@ -83,7 +84,6 @@ public class Solution {
                     intarr[j] = Integer.parseInt(tokens[j]);
                 }
             MinHeap<Integer> m = new MinHeap<Integer>(intarr);
-                //int len = intarr.length;
                 System.out.println(m.isMinHeap(intarr));
             }
             break;
@@ -100,7 +100,6 @@ public class Solution {
                     floarr[j] = Float.parseFloat(tokens[j]);
                 }
                 MinHeap<Float> m = new MinHeap<Float>(floarr);
-                //int len = floarr.length;
                 System.out.println(m.isMinHeap(floarr));
             }
             }
@@ -115,7 +114,6 @@ public class Solution {
                     douarr[j] = Double.parseDouble(tokens[j]);
                 }
                 MinHeap<Double> m = new MinHeap<Double>(douarr);
-                //int len = douarr.length;
                 System.out.println(m.isMinHeap(douarr));
             }
             break;
