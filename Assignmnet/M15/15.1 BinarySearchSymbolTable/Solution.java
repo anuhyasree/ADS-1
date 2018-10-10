@@ -36,6 +36,7 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @param      capacity  The capacity
      */
+    // The compexity is O(1)
     BinarysearchST(final int capacity) {
         keys = (Key[]) new Comparable[capacity];
         vals = (Value[]) new Object[capacity];
@@ -45,6 +46,8 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @param      capacity  The capacity
      */
+    // The compexity is O(N) because there is
+    //a for loop whcih is runned for N times
     public void resize(final int capacity) {
         Key[] tempkey = (Key[]) new Comparable[capacity];
         Value[] tempval = (Value[]) new Object[capacity];
@@ -61,6 +64,7 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // The compexity is O(1)
     public int size() {
         return size;
     }
@@ -69,6 +73,8 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     True if empty, False otherwise.
      */
+    // In this method another is also called.
+    // So the compexity is O(N)
     public boolean isEmpty() {
         return size() == 0;
     }
@@ -79,6 +85,8 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // In this method another is also called.
+    // So the compexity is O(N)
     public boolean contains(final Key key) {
         return get(key) != null;
     }
@@ -89,6 +97,8 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // In this method another is also called.
+    // So the compexity is O(N)
     public Value get(final Key key) {
         if (key == null) {
             throw new IllegalArgumentException("Key is null");
@@ -113,6 +123,8 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // In this method another is also called.
+    // So the compexity is O(N)
     public int rank(final Key key) {
         if (key == null) {
             throw new IllegalArgumentException("argument to rank() is null");
@@ -139,6 +151,7 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      * @param      key   The key
      * @param      val   The value
      */
+    // The compexity is O(N)
     public void put(final Key key, final Value val) {
         if (key == null) {
             throw new IllegalArgumentException("Null key");
@@ -175,6 +188,8 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @param      key   The key
      */
+    // The compexity is O(N)
+    // In this method another is also called.
     public void delete(final Key key) {
         if (key == null) {
             throw new IllegalArgumentException("argument to delete() is null");
@@ -212,6 +227,7 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // The compexity is O(1)
     public Key select(final int k) {
         if (k < 0 || k >= size()) {
             throw new IllegalArgumentException("Invalid argument");
@@ -227,6 +243,7 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // The compexity is O(1)
     public Key floor(final Key key) {
         if (key == null) {
             throw new IllegalArgumentException("argument to floor() is null");
@@ -249,6 +266,7 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // The compexity is O(1)
     public Key ceiling(final Key key) {
         if (key == null) {
             throw new IllegalArgumentException("argument to ceiling() is null");
@@ -265,6 +283,7 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // The compexity is O(1)
     public ArrayList<String> keys() {
         return keys(min(), max());
     }
@@ -273,6 +292,7 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // The compexity is O(1)
     public Key min() {
         // if (isEmpty()) {
         //     throw new Exception("There is no element");
@@ -285,6 +305,7 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // The compexity is O(1)
     public Key max() {
         // if (isEmpty()) {
         //     throw new Exception("There is no element");
@@ -295,6 +316,8 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
     /**
      * Deletes the minimum value.
      */
+    // The compexity is O(N)
+    // delete method is called n times.
     public void deleteMin() {
         delete(min());
     }
@@ -307,6 +330,7 @@ class BinarysearchST<Key extends Comparable<Key>, Value> {
      *
      * @return     { description_of_the_return_value }
      */
+    // The compexity is O(1)
     public ArrayList<String> keys(final Key low, final Key high) {
         if (low == null) {
             throw new
