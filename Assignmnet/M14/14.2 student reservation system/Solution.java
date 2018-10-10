@@ -238,8 +238,8 @@ class Student implements Comparable<Student> {
      * @param      rc           Reservation Category.
      */
     Student(String studentName, String dateOfBirth,
-                   int m1, int m2, int m3, int tm,
-                   String rc) {
+            int m1, int m2, int m3, int tm,
+            String rc) {
         this.studentName = studentName;
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
@@ -377,46 +377,46 @@ class Student implements Comparable<Student> {
  */
 class Heap {
 
-  /**
-   * { function_description }.
-   *
-   * @param      v     { parameter_description }
-   * @param      w     { parameter_description }
-   *
-   * @return     { description_of_the_return_value }
-   */
-  private static boolean less(final Comparable v, final Comparable w) {
-    // System.out.println("V : " + (Team)v + " \t And : " + (Team)w);
-    return v.compareTo(w) < 0;
-  }
-
-  /**
-   * { function_description }.
-   *
-   * @param      a     { parameter_description }
-   * @param      i     { parameter_description }
-   * @param      j     { parameter_description }
-   */
-  private static void exch(final Comparable[] a, final int i, final int j) {
-    Comparable swap = a[i];
-    a[i] = a[j];
-    a[j] = swap;
-  }
-
-  /**
-   * Sorts the elements using insertion sort.
-   * @param a contains elements that are to be sorted.
-   */
-  public static void sort(final Comparable[] a) {
-    int n = a.length;
-    for (int i = 0; i < n; i++) {
-      for (int j = i; j > 0; j--) {
-        if (less(a[j], a[j - 1])) {
-          exch(a, j, j - 1);
-        } else {
-          break;
-        }
-      }
+    /**
+     * { function_description }.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private static boolean less(final Comparable v, final Comparable w) {
+        // System.out.println("V : " + (Team)v + " \t And : " + (Team)w);
+        return v.compareTo(w) < 0;
     }
-  }
+
+    /**
+     * { function_description }.
+     *
+     * @param      a     { parameter_description }
+     * @param      i     { parameter_description }
+     * @param      j     { parameter_description }
+     */
+    private static void exch(final Comparable[] a, final int i, final int j) {
+        Comparable swap = a[i];
+        a[i] = a[j];
+        a[j] = swap;
+    }
+
+    /**
+     * Sorts the elements using insertion sort.
+     * @param a contains elements that are to be sorted.
+     */
+    public static void sort(final Comparable[] a) {
+        int n = a.length;
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j > 0; j--) {
+                if (less(a[j], a[j - 1])) {
+                    exch(a, j, j - 1);
+                } else {
+                    break;
+                }
+            }
+        }
+    }
 }
