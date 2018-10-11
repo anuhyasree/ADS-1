@@ -2,7 +2,6 @@ class Book {
 	String author;
 	String name;
 	Float price;
-	// int value;
 
 	Book() {
 
@@ -11,7 +10,6 @@ class Book {
 		this.author = auth;
 		this.name = na;
 		this.price = cost;
-		// this.value = val;
 	}
 	String getAuthor() {
 		return this.author;
@@ -22,9 +20,6 @@ class Book {
 	Float getCost() {
 		return this.price;
 	}
-	// int getValue() {
-	// 	return this.value;
-	// }
 }
 class Node {
 	Book data;
@@ -34,11 +29,7 @@ class Node {
 	Node(Book k, int v) {
 		this.data = (k);
 		this.val = v;
-		// n = new Node();
 	}
-	// Node(Book b) {
-	// 	this.data = b;
-	// }
 }
 
 class BinarySt<Key extends Comparable<Key>, Value> {
@@ -48,13 +39,13 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 	BinarySt() {
 
 	}
-	// BinarySt(String na, String auth, Float cost, int val) {
-	// 	book = new Book(auth, na, cost);
-	// 	value = val;
-	// }
+	// in this method another methd is called
+	// so the complexity is O(N)
 	void put(Book key, int val) {
 		root = put(root, key, val);
 	}
+	// in this method another methd is called
+	// so the complexity is O(N)
 	Node put(Node x, Book key, int val) {
 		if (x == null) {
 			return new Node(key, val);
@@ -71,8 +62,9 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 		}
 		return x;
 	}
+	// in this method another methd is called
+	// so the complexity is O(N)
 	Integer get(Book key) {
-		// System.out.println(key.getName());
 		Node x = root;
 		while (x != null) {
 			int cmp = key.getName().compareTo(x.data.getName());
@@ -84,7 +76,7 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 	        }
 	        if (cmp == 0) {
 	        	return x.val;
-	        } 	
+	        }
 		}
 		return null;
 	}
