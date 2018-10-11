@@ -40,12 +40,12 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 
 	}
 	// in this method another methd is called
-	// so the complexity is O(N)
+	// so the complexity is O(logN)
 	void put(Book key, int val) {
 		root = put(root, key, val);
 	}
 	// in this method another methd is called
-	// so the complexity is O(N)
+	// so the complexity is O(logN)
 	Node put(Node x, Book key, int val) {
 		if (x == null) {
 			return new Node(key, val);
@@ -63,7 +63,7 @@ class BinarySt<Key extends Comparable<Key>, Value> {
 		return x;
 	}
 	// in this method another methd is called
-	// so the complexity is O(N)
+	// so the complexity is O(logN)
 	Integer get(Book key) {
 		Node x = root;
 		while (x != null) {
