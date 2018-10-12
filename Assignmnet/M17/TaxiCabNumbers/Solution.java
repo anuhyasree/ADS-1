@@ -7,18 +7,18 @@ class Cubesum implements Comparable<Cubesum> {
     /**.
      * { item_description }
      */
-    int i, j;
+    protected int i, j;
     /**.
      * { var_description }
      */
-    long sum;
+    protected long sum;
     /**.
      * Constructs the object.
      *
      * @param      i     { parameter_description }
      * @param      j     { parameter_description }
      */
-    public Cubesum(int i, int j) {
+    public Cubesum(final int i, final int j) {
         this.sum = (long) i * i * i + (long) j * j * j;
         this.i = i;
         this.j = j;
@@ -30,7 +30,7 @@ class Cubesum implements Comparable<Cubesum> {
      *
      * @return     { description_of_the_return_value }
      */
-    public int compareTo(Cubesum that) {
+    public int compareTo(final Cubesum that) {
         if (this.sum < that.sum) {
             return -1;
         } else if (this.sum > that.sum) {
@@ -63,7 +63,7 @@ final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNextLine()) {
             String[] input = sc.nextLine().split(" ");
