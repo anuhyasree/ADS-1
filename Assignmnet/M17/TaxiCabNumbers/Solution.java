@@ -23,7 +23,7 @@ final class Solution {
             int ip2 = Integer.parseInt(token[1]);
             int n = thousand;
             MinPQ<Taxicab> pq = new MinPQ<Taxicab>();
-                for (int i = 1; i <= n; i++) {
+            for (int i = 1; i <= n; i++) {
                 pq.insert(new Taxicab(i, i));
             }
             int pair = 1;
