@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**.
  * Class for cubesum.
  */
-class Cubesum implements Comparable<Cubesum> {
+final class Cubesum implements Comparable<Cubesum> {
     /**.
      * { item_description }
      */
