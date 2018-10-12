@@ -1,12 +1,28 @@
 import java.util.*;
+/**.
+ * Class for cubesum.
+ */
 class Cubesum implements Comparable<Cubesum> {
     int i, j;
     long sum;
+    /**.
+     * Constructs the object.
+     *
+     * @param      i     { parameter_description }
+     * @param      j     { parameter_description }
+     */
     public Cubesum(int i, int j) {
         this.sum = (long) i * i * i + (long) j * j * j;
         this.i = i;
         this.j = j;
     }
+    /**.
+     * { function_description }
+     *
+     * @param      that  The that
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int compareTo(Cubesum that) {
         if (this.sum < that.sum) {
             return -1;
@@ -16,11 +32,24 @@ class Cubesum implements Comparable<Cubesum> {
             return  0;
         }
     }
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return i + "^3 + " + j + "^3";
     }
 }
+/**.
+ * Class for solution.
+ */
 class Solution {
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNextLine()) {
