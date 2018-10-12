@@ -1,9 +1,15 @@
-import java.util.*;
+import java.util.Scanner;
 /**.
  * Class for cubesum.
  */
 class Cubesum implements Comparable<Cubesum> {
+    /**.
+     * { item_description }
+     */
     int i, j;
+    /**.
+     * { var_description }
+     */
     long sum;
     /**.
      * Constructs the object.
