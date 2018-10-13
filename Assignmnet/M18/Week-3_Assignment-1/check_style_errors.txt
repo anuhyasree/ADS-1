@@ -1,7 +1,8 @@
 Starting audit...
-[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Solution.java:10:11: 'private' modifier out of order with the JLS suggestions. [ModifierOrder]
-[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Solution.java:14:11: 'private' modifier out of order with the JLS suggestions. [ModifierOrder]
-[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Solution.java:21:24: 'name' hides a field. [HiddenField]
-[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Solution.java:21:43: 'share' hides a field. [HiddenField]
+[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Stock.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Stock.java:8:9: Variable 'name' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Stock.java:12:8: Variable 'share' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Stock.java:19:24: 'name' hides a field. [HiddenField]
+[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Stock.java:19:43: 'share' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 5 errors.
