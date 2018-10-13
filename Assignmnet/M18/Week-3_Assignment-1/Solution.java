@@ -78,6 +78,61 @@ public final class Solution {
 		ma1.display();
 		mi1.display();
 
+		MinPQ<Stock> min2 = new MinPQ<Stock>();
+		MaxPQ<Stock> max2 = new MaxPQ<Stock>();
+
+		for (int i = 0; i < n; i++) {
+			String[] inputs = scan.nextLine().split(",");
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
+			max2.insert(temp);
+			min2.insert(temp);
+		}
+		max2.display();
+		min2.display();
+
+		MinPQ<Stock> min3 = new MinPQ<Stock>();
+		MaxPQ<Stock> max3 = new MaxPQ<Stock>();
+
+		for (int i = 0; i < n; i++) {
+			String[] inputs = scan.nextLine().split(",");
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
+			max3.insert(temp);
+			min3.insert(temp);
+		}
+		max3.display();
+		min3.display();
+
+		MinPQ<Stock> min4 = new MinPQ<Stock>();
+		MaxPQ<Stock> max4 = new MaxPQ<Stock>();
+
+		for (int i = 0; i < n; i++) {
+			String[] inputs = scan.nextLine().split(",");
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
+			max4.insert(temp);
+			min4.insert(temp);
+		}
+		max4.display();
+		min4.display();
+
+
+		MinPQ<Stock> min5 = new MinPQ<Stock>();
+		MaxPQ<Stock> max5 = new MaxPQ<Stock>();
+
+		for (int i = 0; i < n; i++) {
+			String[] inputs = scan.nextLine().split(",");
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
+			max5.insert(temp);
+			min5.insert(temp);
+		}
+		max5.display();
+		min5.display();
+
+
+
 
 	}
 }
