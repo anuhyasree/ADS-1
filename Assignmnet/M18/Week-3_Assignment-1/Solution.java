@@ -7,11 +7,11 @@ class Stock implements Comparable<Stock> {
     /**.
      * { var_description }
      */
-    private String name;
+    final private String name;
     /**.
      * { var_description }
      */
-    private double share;
+    final private double share;
     /**.
      * Constructs the object.
      *
