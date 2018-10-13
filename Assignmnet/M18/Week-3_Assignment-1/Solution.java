@@ -64,5 +64,20 @@ public final class Solution {
 		max.display();
 		min.display();
 
+
+		MinPQ<Stock> mi1 = new MinPQ<Stock>();
+		MaxPQ<Stock> ma1 = new MaxPQ<Stock>();
+
+		for (int i = 0; i < n; i++) {
+			String[] inputs = scan.nextLine().split(",");
+			Stock temp = new Stock(inputs[0],
+			                       Double.parseDouble(inputs[1]));
+			ma1.insert(temp);
+			mi1.insert(temp);
+		}
+		ma1.display();
+		mi1.display();
+
+
 	}
 }
