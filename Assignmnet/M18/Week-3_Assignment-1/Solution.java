@@ -57,13 +57,12 @@ public final class Solution {
 		for (int i = 0; i < n; i++) {
 			String[] inputs = scan.nextLine().split(",");
 			Stock temp = new Stock(inputs[0],
-								   Double.parseDouble(inputs[1]));
+			                       Double.parseDouble(inputs[1]));
 			max.insert(temp);
 			min.insert(temp);
-
-			max.display();
-		min.display();
 		}
+		max.display();
+		min.display();
 
 	}
 }

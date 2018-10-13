@@ -11,6 +11,5 @@ Starting audit...
 [ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Solution.java:19:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Solution.java:23:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Solution.java:44:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M18\Week-3_Assignment-1\Solution.java:60: Line is longer than 80 characters (found 98). [LineLength]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 12 errors.
