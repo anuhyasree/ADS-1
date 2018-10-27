@@ -3,40 +3,49 @@ import java.util.Scanner;
  * Class for student.
  */
 class Student {
-    private int rollNumber;
-    private String name;
-    private double marks;
+  /**.
+   * { var_description }
+   */
+  private int rollNumber;
+  /**.
+   * { var_description }
+   */
+  private String name;
+  /**.
+   * { var_description }
+   */
+  private double marks;
 
-    /**.
-     * Constructs the object.
-     *
-     * @param      rollno  The rollno
-     * @param      name    The name
-     * @param      marks   The marks
-     */
-    Student(final int rollno, final String name, final double marks) {
-        this.rollNumber = rollno;
-        this.name = name;
-        this.marks = marks;
-    }
+  /**.
+   * Constructs the object.
+   *
+   * @param      rollno  The rollno
+   * @param      stuname    The name
+   * @param      stumarks   The marks
+   */
+  Student(final int rollno, final String stuname, final double stumarks) {
+    this.rollNumber = rollno;
+    this.name = stuname;
+    this.marks = stumarks;
+  }
 
-    /**.
-     * Gets the name.
-     *
-     * @return     The name.
-     */
-    public String getName() {
-        return this.name;
-    }
+  /**.
+   * Gets the name.
+   *
+   * @return     The name.
+   */
+  public String getName() {
+    return this.name;
+  }
 
-    /**.
-     * Gets the marks.
-     *
-     * @return     The marks.
-     */
-    public double getMarks() {
-        return this.marks;
-    }
+  /**.
+   * Gets the marks.
+   *
+   * @return     The marks.
+   */
+  public double getMarks() {
+    return this.marks;
+  }
 }
 
 
@@ -61,7 +70,7 @@ public final class Solution {
    */
   public static void main(final String[] args) {
 
-    //final int three = 3;
+    final int three = 3;
     Scanner scan = new Scanner(System.in);
 
     int n = Integer.parseInt(scan.nextLine());
@@ -72,8 +81,8 @@ public final class Solution {
     for (int i = 0; i < n; i++) {
       String[] str = scan.nextLine().split(",");
       Student stu = new Student(Integer.parseInt(str[0]),
-                                 str[1],
-                                 Double.parseDouble(str[2]));
+                                str[1],
+                                Double.parseDouble(str[2]));
       section.put(Integer.parseInt(str[0]), stu);
     }
 
