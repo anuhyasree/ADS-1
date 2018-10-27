@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M24\1\Solution.java:79:33: '3' is a magic number. [MagicNumber]
-[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M24\1\Solution.java:91:26: ';' is preceded with whitespace. [NoWhitespaceBefore]
 Audit done.
-Checkstyle ends with 2 errors.

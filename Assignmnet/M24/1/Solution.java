@@ -76,7 +76,7 @@ public final class Solution {
     int n = Integer.parseInt(scan.nextLine());
 
     LinearProbingHashST<Integer, Student> section =
-      new LinearProbingHashST<>(3 * n);
+      new LinearProbingHashST<>(three * n);
 
     for (int i = 0; i < n; i++) {
       String[] str = scan.nextLine().split(",");
@@ -88,7 +88,7 @@ public final class Solution {
 
     int q = Integer.parseInt(scan.nextLine());
 
-    for (int j = 0; j < q ; j++) {
+    for (int j = 0; j < q; j++) {
       String[] tokens = scan.nextLine().split(" ");
       switch (tokens[2]) {
       case "1":
