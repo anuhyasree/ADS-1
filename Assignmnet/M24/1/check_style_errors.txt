@@ -11,6 +11,7 @@ Starting audit...
 [ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M24\1\Solution.java:24: Missing a Javadoc comment. [JavadocType]
 [ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M24\1\Solution.java:25:3: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M24\1\Solution.java:28:3: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M24\1\Solution.java:36:33: '3' is a magic number. [MagicNumber]
 [ERROR] C:\Users\Z5170 VVIN\Desktop\msit\1styr\ADS-1\Assignmnet\M24\1\Solution.java:48:26: ';' is preceded with whitespace. [NoWhitespaceBefore]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 14 errors.

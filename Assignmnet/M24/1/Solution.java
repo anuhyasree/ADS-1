@@ -33,7 +33,7 @@ public final class Solution {
     int n = Integer.parseInt(scan.nextLine());
 
     LinearProbingHashST<Integer, Student> section =
-      new LinearProbingHashST<>(n);
+      new LinearProbingHashST<>(3 * n);
 
     for (int i = 0; i < n; i++) {
       String[] str = scan.nextLine().split(",");
