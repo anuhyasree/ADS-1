@@ -4,9 +4,9 @@ public class BST<Key extends Comparable<Key>, Value> {
     private Node root;
     private class Node {
         private Key key;
-        private Value val;         // associated data
-        private Node left, right;  // left and right subtrees
-        private int size;          // number of nodes in subtree
+        private Value val;
+        private Node left, right;
+        private int size;
 
         public Node(Key key, Value val, int size) {
             this.key = key;
