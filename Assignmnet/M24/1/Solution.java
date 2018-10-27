@@ -1,30 +1,64 @@
 import java.util.Scanner;
-
+/**.
+ * Class for student.
+ */
 class Student {
     private int rollNumber;
     private String name;
     private double marks;
 
+    /**.
+     * Constructs the object.
+     *
+     * @param      rollno  The rollno
+     * @param      name    The name
+     * @param      marks   The marks
+     */
     Student(final int rollno, final String name, final double marks) {
         this.rollNumber = rollno;
         this.name = name;
         this.marks = marks;
     }
 
+    /**.
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
         return this.name;
     }
 
+    /**.
+     * Gets the marks.
+     *
+     * @return     The marks.
+     */
     public double getMarks() {
         return this.marks;
     }
 }
 
 
+/**.
+ * { item_description }
+ */
 public final class Solution {
+
+  /**.
+   * Constructs the object.
+   */
   private Solution() {
+    /**.
+     * { item_description }
+     */
   }
 
+  /**.
+   * { function_description }
+   *
+   * @param      args  The arguments
+   */
   public static void main(final String[] args) {
 
     //final int three = 3;

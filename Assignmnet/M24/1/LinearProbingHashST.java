@@ -108,7 +108,6 @@ public class LinearProbingHashST<Key, Value> {
             System.err.println("Hash table size m = " + m + "; array size n = " + n);
             return false;
         }
-
         for (int i = 0; i < m; i++) {
             if (keys[i] == null) continue;
             else if (get(keys[i]) != vals[i]) {
